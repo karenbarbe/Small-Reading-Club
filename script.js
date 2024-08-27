@@ -198,7 +198,7 @@ function createGallery(book) {
     const { title, path, images } = book;
 
     images.forEach(image => {
-      const picture = document.createElement('picture');
+      const picture = document.createElement('div'); // changed from 'picture'
 
       const img = document.createElement('img');
       img.src = `./images/${path}-${image}.jpg`;
@@ -295,7 +295,7 @@ function updateGallery(book, direction, galleryContainer) {
   galleryContainer.innerHTML = '';
 
   newOrder.forEach(image => {
-    const picture = document.createElement('picture');
+    const picture = document.createElement('div'); // changed from 'picture'
 
     const img = document.createElement('img');
     img.src = `./images/${path}-${image}.jpg`;

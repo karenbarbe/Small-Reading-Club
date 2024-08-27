@@ -423,29 +423,29 @@ header a:any-link {
   }
 }
 
-.gallery__container picture {
+.gallery__container div {
   --cover-width: 18rem;
   height: auto;
   flex-shrink: 0;
   max-width: var(--cover-width);
 } 
 
-.gallery__container picture img {
+.gallery__container div img {
   height: 100%;
   object-fit: cover;
 }
 
-.gallery__container picture:first-child {
+.gallery__container div:first-child {
   box-shadow: .2rem 0rem .8rem 0 rgba(0, 0, 0, 0.15);
 }
 
-.gallery__container picture:not(:first-child) {
+.gallery__container div:not(:first-child) {
   opacity: .6;
   max-width: calc(var(--cover-width) * .9);
 }
 
 @media only screen and (min-width: 768px) {
-  .gallery__container picture {
+  .gallery__container div {
     --cover-width: 24rem;
   } 
 }
@@ -490,15 +490,15 @@ header a:any-link {
   border-color: var(--grey);
 }
 
-.text__container p.p-md {
-  color: var(--black);
-}
-
 .text__container h2,
 .text__container h3,
 .text__container h4,
 .text__container p:not(.p-md) {
   margin-block-end: 1rem;
+}
+
+.text__container p.p-md {
+  color: var(--black);
 }
 
 .text__container ul {

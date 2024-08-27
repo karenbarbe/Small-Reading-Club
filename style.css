@@ -63,6 +63,10 @@ body {
   color: var(--color-dark);
   background-color: var(--white);
   font-family: soleil, sans-serif;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main {

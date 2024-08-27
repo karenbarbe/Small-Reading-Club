@@ -6,7 +6,7 @@ const books = [
       images: ['cover', '1', '2', '3', '4'],
       title: 'Liliana’s Invincible Summer',
       author: 'Cristina Rivera Garza',
-      genre: ['Memoir', 'Nonfiction', 'Biography', 'Feminism', 'LatinAmerican'],
+      genre: ['Memoir', 'Nonfiction', 'Biography', 'Feminism', 'Latin American'],
       year: 2021,
       summary: 'In this gut-wrenching blend of memoir and reportage, Rivera Garza  investigates her younger sister Liliana’s 1990 murder by an abusive ex-boyfriend, who remains at large. Placing her sister’s death in the context of the femicide crisis in Mexico, Rivera Garza documents and recreates the years and months leading up to her murder, interweaving startling facts, case files and newspaper accounts with lyrical meditations on her family life and Liliana’s efforts to break away from her obsessive high school boyfriend. The excerpts from Liliana’s teenage diary and her oft-repeated desire not to be left alone haunt the narrative, as do Rivera Garza’s guilt and shame over her sister’s death.',
       awards: ['Pulitzer Prize for Memoir or Autobiography (2024)', 'Premio Xavier Villaurrutia for Novela (2021)', 'National Book Award Finalist for Non-Fiction (2023)'],

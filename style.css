@@ -239,18 +239,12 @@ header a:any-link {
   margin-inline: auto;
 }
 
-.count-box p {
-  font-size: 0.85rem;
-}
 
 @media only screen and (min-width: 480px) {
   .count-box {
     width: var(--width-sm);
   }
 
-  .count-box p {
-    font-size: 1rem;
-  }
 }
 
 .count-box span {

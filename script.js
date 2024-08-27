@@ -201,7 +201,7 @@ function createGallery(book) {
       const picture = document.createElement('picture');
 
       const img = document.createElement('img');
-      img.src = `/images/${path}-${image}.jpg`;
+      img.src = `./images/${path}-${image}.jpg`;
       img.alt = `${title}`;
       img.loading = 'lazy';
       

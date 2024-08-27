@@ -7,7 +7,7 @@
   --black: #000000;
   --color-light: #f8f8f4;
   --color-light2: #E7E7DA;
-  --color-dark: #4e4e54;
+  --color-dark: #27272B; /*#4e4e54*/
   --color-accent: #EF0303;
   --color-accent-rgb: 239, 3, 3;
 
@@ -120,10 +120,11 @@ main {
   display: none;
 }
 
+/*
 input {
   accent-color: var(--color-dark);
   margin-inline-end: .725rem;
-}
+}*/
 
 
 
@@ -175,6 +176,7 @@ h4 {
 h5 {
   font-size: 1rem;
   color: var(--black);
+  font-weight: 600;
 }
 
 p,
@@ -254,7 +256,7 @@ header a:any-link {
 .count-box span {
   display: inline-block;
   width: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-inline-start: .4em;
   color: var(--black);
 }

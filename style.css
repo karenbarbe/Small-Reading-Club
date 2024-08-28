@@ -7,7 +7,7 @@
   --black: #000000;
   --color-light: #f8f8f4;
   --color-light2: #E7E7DA;
-  --color-dark: #27272B; /*#4e4e54*/
+  --color-dark: #27272B;
   --color-accent: #EF0303;
   --color-accent-rgb: 239, 3, 3;
 
@@ -63,10 +63,8 @@ body {
   color: var(--color-dark);
   background-color: var(--white);
   font-family: soleil, sans-serif;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 main {

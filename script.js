@@ -1,4 +1,4 @@
-// Books information
+// Books database
 const books = [
     {
       country: 'Mexico',
@@ -53,8 +53,6 @@ const books = [
     }
   ];
 
-
-// Variables for HTML elements
 
 const articlesListElement = document.getElementById('articles__list');
 
@@ -124,10 +122,6 @@ function createArticleItems(books) {
     const text1Container = document.createElement('div');
     text1Container.classList.add('text__container')
 
-    // h3 Summary heading
-    //const h3Summary = document.createElement('h3');
-    //h3Summary.textContent = 'Summary';
-
     // Summary paragraph
     const summaryBody = document.createElement('p');
     summaryBody.textContent = summary;
@@ -171,7 +165,7 @@ function createArticleItems(books) {
     choiceContainer.append(readChoiceTile, toReadChoiceTile);
     infoContainer.append(pYear, ulGenre);
     text2Container.append(h4Why, whyBody, h4Awards, ulAwards);
-    text1Container.append(/*h3Summary,*/ summaryBody);
+    text1Container.append(summaryBody);
     titleContainer.append(h2Title, pAuthor);
     reviewContainer.append(titleContainer, text1Container, text2Container, infoContainer);
     chevPrevContainer.appendChild(chevronPrev);
@@ -198,7 +192,7 @@ function createGallery(book) {
     const { title, path, images } = book;
 
     images.forEach(image => {
-      const picture = document.createElement('div'); // changed from 'picture'
+      const picture = document.createElement('div'); // originally this was a 'picture' element but changed because of Safari behavior
 
       const img = document.createElement('img');
       img.src = `./images/${path}-${image}.jpg`;
@@ -295,7 +289,7 @@ function updateGallery(book, direction, galleryContainer) {
   galleryContainer.innerHTML = '';
 
   newOrder.forEach(image => {
-    const picture = document.createElement('div'); // changed from 'picture'
+    const picture = document.createElement('div'); // originally this was a 'picture' element but changed because of Safari behavior
 
     const img = document.createElement('img');
     img.src = `./images/${path}-${image}.jpg`;

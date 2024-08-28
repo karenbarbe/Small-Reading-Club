@@ -63,20 +63,13 @@ body {
   color: var(--color-dark);
   background-color: var(--white);
   font-family: soleil, sans-serif;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  font-weight: 300;
 }
 
 main {
   margin-block-end: 4rem;
 }
 
-
-.wrapper-lg {
-  margin-block: 8rem;
-  margin-inline: auto;
-  padding: var(--sp-md);
-}
 
 .flex {
   display: flex;
@@ -88,10 +81,6 @@ main {
   flex-direction: column;
 }
 
-.centered {
-  justify-content: center;
-  align-items: center;
-}
 
 .stack-xs>*,
 .stack-sm>*,
@@ -113,17 +102,6 @@ main {
 .stack-lg>*+* {
   --spacing: var(--sp-lg);
 }
-
-.hidden {
-  display: none;
-}
-
-/*
-input {
-  accent-color: var(--color-dark);
-  margin-inline-end: .725rem;
-}*/
-
 
 
 
@@ -202,6 +180,7 @@ label {
 
 .label {
   color: var(--color-accent);
+  font-weight: 400;
 }
 
 .label-heading {
@@ -263,7 +242,6 @@ header a:any-link {
 
 /* Intro section */
 
-
 .intro-bg {
   width: 100%;
   height: auto;
@@ -276,7 +254,6 @@ header a:any-link {
   margin-inline: auto;
   padding-inline: 1rem;
 }
-
 
 .intro__content {
   justify-content: center;
@@ -314,9 +291,14 @@ header a:any-link {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (min-height: 840px) {
+
   .intro__container {
-    height: 60vh;
+    --width: calc(var(--width-sm) + 12vw);
+    --margin: calc((100vw - var(--width)) / 2);
+    width: var(--width);
+    margin-inline: calc(var(--margin) + 6vw) var(--margin);
+    height: 45vh;
   }
 }
 
@@ -454,8 +436,7 @@ header a:any-link {
   } 
 }
 
-
-
+/* Section layout */
 
 .header__container,
 .review__container,
@@ -466,7 +447,6 @@ header a:any-link {
   margin-inline: auto;
   padding-inline: 1rem;
 }
-
 
 .review__container {
   gap: 1.5rem;
@@ -487,6 +467,9 @@ header a:any-link {
     width: var(--width-md);
   }
 }
+
+
+/* Text container section */
 
 .text__container:first-of-type {
   padding-block-end: 1.75rem;
@@ -711,6 +694,9 @@ ul.genre {
   margin-block-end: 1rem;
 }
 
+.footer__container ul {
+  line-height: 1.6;
+}
 .footer__inner {
   display: grid;
 }

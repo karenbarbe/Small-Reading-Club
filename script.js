@@ -324,5 +324,19 @@ function createChoiceTile(name, svgAlt, i, title, labelText) {
 }
 
 
-
 createArticleItems(books);
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  loadSVGs();
+});
+
+function loadSVGs() {
+  fetch('icons.svg')
+      .then(response => response.text())
+      .then(svgContent => {
+          document.getElementById('svg-container').innerHTML = svgContent;
+      })
+      .catch(error => console.error('Error loading SVG file:', error));
+}

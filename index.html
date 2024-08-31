@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
 </head> 
 <body>
+  <div id="svg-container" style="display: none;"></div>
   <header>
     <nav class="nav">
       <a href="#my-reading">
@@ -33,12 +34,11 @@
             <div class="h1__container flex">
               <div class="bookmark flex-column">
                 <div class="bookmark-top"></div>
-                <svg id="bookmark-intro" class="bookmark-icon" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 37">
-                <path  class="st0" d="M0.4,35.9c0.1,0,0.2,0.1,0.4,0.1c0.1,0,0.2,0,0.4-0.1l10.9-8.4L23,35.9
-                c0.1,0,0.2,0.1,0.4,0.1c0.1,0,0.2,0,0.3-0.1c0.1,0,0.2-0.2,0.3-0.4c0-0.1,0-0.3,0-0.5V0H0v35.1c0,0.2,0,0.3,0,0.5
-                C0,35.6,0.2,35.8,0.4,35.9L0.4,35.9z"/>
-                 </svg>
+
+                 <svg class="bookmark-icon" viewBox="0 0 24 37" width="24" height="37">
+                  <use xlink:href="#bookmark-intro"></use>
+                </svg>
+
               </div>
               <h1>Reading club</h1>
             </div>
@@ -70,13 +70,13 @@
     <section id="articles__list"></section>
 
     <section id="my-reading" class="my-reading__container">
-      <svg id="bookmark-icon" class="bookmark-icon" xmlns="http://www.w3.org/2000/svg" 
-	 viewBox="0 0 32 41">
 
-    <path d="M4.4,39.9C4.5,40,4.6,40,4.8,40c0.1,0,0.2-0.1,0.4-0.1L16,30.6L27,39.9
-    c0.1,0.1,0.2,0.1,0.4,0.1c0.1,0,0.2,0,0.3-0.1c0.1-0.1,0.2-0.2,0.3-0.4C28,39.4,28,39.2,28,39V0H4v39c0,0.2,0,0.3,0.1,0.5
-    C4.2,39.7,4.3,39.8,4.4,39.9z"/>
+
+    <svg class="bookmark-icon" viewBox="0 0 32 41" width="32" height="41">
+      <use xlink:href="#bookmark-icon"></use>
     </svg>
+
+
       <div class="my-reading__header">
         <h2>My reading</h2>
       </div>
@@ -131,36 +131,6 @@
       </div>
   </div>
 </footer>
-
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="prev-icon" viewBox="0 0 32 70">
-    <path class="icon" d="M30.8,2.9c0.2-0.2,0.2-0.5,0-0.7c-0.2-0.2-0.5-0.2-0.7,0L1.6,33.2c-0.8,0.9-0.8,2.5,0,3.5
-    l28.6,31c0.2,0.2,0.5,0.2,0.7,0s0.2-0.5,0-0.7L2.3,36c-0.6-0.7-0.6-1.6,0-2.3L30.8,2.9"/>
-  </symbol>
-
-  <symbol id="next-icon" viewBox="0 0 32 70">
-    <path class="icon" d="M1.2,67.1c-0.2,0.2-0.2,0.5,0,0.7s0.5,0.2,0.7,0l28.6-31c0.8-1,0.8-2.5,0-3.5L2,2.4
-    c-0.2-0.2-0.5-0.2-0.7,0C1.1,2.6,1.1,2.9,1.3,3l28.5,30.8c0.6,0.6,0.6,1.6,0,2.2L1.2,67.1"/>
-  </symbol>
-
-  <symbol id="to-read-icon" viewBox="0 0 52 70">
-    <path d="M32.4,58.9H18.1v-5.7l-1.9-12.8l-8.1,6.4c-0.6,0.4-1,1-1.2,1.6l-2.5,6.2C3.8,56,2.5,57,1,57.2
-			l1.3-10.9c0-0.7,0.4-1.4,0.9-2c2.5-2.7,9.6-11,15-13.1c3.1-1.3,4.4-2,10.3-3.4c0.5-0.1,0.9-0.3,1.3-0.7l5.4-4.7
-			c0.5-0.4,0.9-1,1.1-1.7l1.5-4.3l3.5,1.1L41,22.6c0,0.7-0.3,1.5-0.8,2c-1.3,1.6-4.7,5.6-7.8,8.8c-0.5,0.5-0.7,1.1-0.7,1.7
-			L32.4,58.9L32.4,58.9z M41.5,0.9l-4.6,15.2l1,0.3l0.7-2c0.5-1.4,1.7-2.5,3.2-2.8l-0.4,5.9l4.9,1.5l4.6-15.2l0,0
-			C50.9,3.8,41.5,0.9,41.5,0.9z M24.4,24.3c0-2.5-2-4.5-4.5-4.5s-4.5,2-4.5,4.5s2,4.5,4.5,4.5S24.4,26.8,24.4,24.3z"/>
-  </symbol>
-
-
-  <symbol id="read-icon" viewBox="0 0 52 70">
-    <path d="M25.6,30.6c2.5,0,4.5-2,4.5-4.5s-2-4.5-4.5-4.5s-4.5,2-4.5,4.5S23.1,30.6,25.6,30.6z
-			 M35.8,35.9L35.8,35.9c-8.6-6.8-17-2.2-19.6,0c-6,5.2-7.9,14.6-8.2,17.3c-1,9.3,5.1,6.6,10.7,2.5l0.2,3.2h14.5L34,45.8l4.8,7.8
-			c0.4,0.6,0.5,1.4,0.4,2.1V65c0,1.6,0.9,3.2,2.3,4.1l2.7-15.3c0,0-1.6-12.6-8.3-18L35.8,35.9z M26.9,48.6c0,0-3.8,3.8-8.2,7.1
-			l-0.3-5l-4.9,2.7l4.6-7.5l0.3,4.8l3-1.7l-0.3-8.4l0,0l0,0c0.3,0,4.7,0.3,5.8,2.2L26.9,48.6L26.9,48.6z M33.1,50.6h-5.5v-7.8
-			c1.2-2,5.9-2.2,5.9-2.2L33.1,50.6z"/>
-  </symbol>
-
-</svg>
 
   <script src="database.js"></script>
   <script src="script.js"></script>

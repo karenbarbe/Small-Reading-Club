@@ -77,7 +77,7 @@ const books = [
     year: 2019,
     summary:
       "In the Eye of the Wild begins with a terrifying account of the anthropologist Nastassja Martin’s nearly fatal run-in with a Kamchatka bear while conducting research in Siberia. In her dangerous encounter with the bear, however, she faced something else altogether: the nonhuman, the animal, the wild. Something in the balance of her world shifts. A change takes place that she must somehow reckon with.",
-    awards: ["-"],
+    awards: [],
     recommendation:
       "A fascinating, mind-altering book about terror, pain, endurance, and self-transformation. Here Nastassja Martin takes us to the farthest limits of human being.",
   },
@@ -91,9 +91,7 @@ const books = [
     year: 1983,
     summary:
       "One of the most important books ever written about our connection to the natural world, Gorillas in the Mist is the riveting account of Dian Fossey’s thirteen years in a remote African rain forest with the greatest of the great apes. Fossey’s extraordinary efforts to ensure the future of the rain forest and its remaining mountain gorillas are captured in her own words and in candid photographs of this fascinating endangered species.",
-    awards: [
-      "Inspiration for the Academy Award–nominated film Gorillas in the Mist (1988)",
-    ],
+    awards: [],
     recommendation:
       "Although Fossey’s work ended tragically with her murder, Gorillas in the Mist remains an invaluable testament to one of the longest-running field studies of primates and reveals her undying passion for her subject.",
   },

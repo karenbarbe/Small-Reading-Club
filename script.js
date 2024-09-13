@@ -80,11 +80,18 @@ function createArticleItems(books) {
     // div text 2 container
     const text2Container = document.createElement("div");
     text2Container.classList.add("text__container");
-    // h4 Awards heading
-    const h4Awards = document.createElement("h4");
-    h4Awards.textContent = "Awards";
-    // Awards list
-    const ulAwards = document.createElement("ul");
+
+    if (awards.length > 0) {
+      // h4 Awards heading
+      const h4Awards = document.createElement("h4");
+      h4Awards.textContent = "Awards";
+      // Awards list
+      const ulAwards = document.createElement("ul");
+      createListItems(awards, ulAwards);
+
+      text2Container.append(h4Awards, ulAwards);
+    }
+
     // h4 Why we love it heading
     const h4Why = document.createElement("h4");
     h4Why.textContent = "Why we love it";
@@ -101,10 +108,7 @@ function createArticleItems(books) {
     // Genre list
     const ulGenre = document.createElement("ul");
     ulGenre.classList.add("flex", "genre");
-
-    // List Items
     createListItems(genre, ulGenre);
-    createListItems(awards, ulAwards);
 
     // Choice container
     const choiceContainer = document.createElement("div");
@@ -121,7 +125,7 @@ function createArticleItems(books) {
 
     choiceContainer.append(readChoiceTile, toReadChoiceTile);
     infoContainer.append(pYear, ulGenre);
-    text2Container.append(h4Why, whyBody, h4Awards, ulAwards);
+    text2Container.append(h4Why, whyBody);
     text1Container.append(summaryBody);
     titleContainer.append(h2Title, pAuthor);
     reviewContainer.append(

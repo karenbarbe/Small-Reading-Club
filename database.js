@@ -112,4 +112,18 @@ const books = [
     recommendation:
       "One of the most remarkable documents of family feeling that has been written, a classic that helped start the memoir boom and remains one of the most moving examples of the genre.",
   },
+  {
+    emotion: "Heartwarming",
+    path: "84charingcrossrd",
+    images: ["cover", "1", "2", "3", "4", "5"],
+    title: "84, Charing Cross Road",
+    author: "Helene Hanff",
+    genre: ["Memoir", "Nonfiction", "Books about books", "British Literature"],
+    year: 1970,
+    summary:
+      "This funny, poignant, classic love story unfolds through a series of letters between Helene Hanff, a freelance writer living in New York City, and a used-book dealer in London at 84, Charing Cross Road. Through the years, though never meeting and separated both geographically and culturally, they share a charming, sentimental friendship based on their common love for books.",
+    awards: [],
+    recommendation:
+      "A unique, throat-lumping, love story about people who love books for readers who love books... A timeless period piece. Do read it.",
+  },
 ];

@@ -113,7 +113,7 @@ const books = [
       "One of the most remarkable documents of family feeling that has been written, a classic that helped start the memoir boom and remains one of the most moving examples of the genre.",
   },
   {
-    emotion: "Heartwarming",
+    emotion: "Cult book",
     path: "84charingcrossrd",
     images: ["cover", "1", "2", "3", "4", "5"],
     title: "84, Charing Cross Road",

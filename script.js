@@ -1,4 +1,31 @@
+let books = [];
 const articlesListElement = document.getElementById("articles__list");
+
+// Main initialization function
+async function initializeApp() {
+  try {
+    const [svgResponse, booksResponse] = await Promise.all([
+      fetch("icons.svg"),
+      fetch("books.json"),
+    ]);
+
+    if (!svgResponse.ok || !booksResponse.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const svgContent = await svgResponse.text();
+    books = await booksResponse.json();
+
+    document.getElementById("svg-container").innerHTML = svgContent;
+
+    createArticleItems(books);
+  } catch (error) {
+    console.error("Error initializing app:", error);
+  }
+}
+
+// Listen for DOMContentLoaded to start the app
+document.addEventListener("DOMContentLoaded", initializeApp);
 
 function createArticleItems(books) {
   const fragment = document.createDocumentFragment();
@@ -345,17 +372,17 @@ function createChoiceTile(name, svgAlt, i, title, labelText) {
   return tile;
 }
 
-createArticleItems(books);
+// createArticleItems(books);
 
-document.addEventListener("DOMContentLoaded", function () {
-  loadSVGs();
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   loadSVGs();
+// });
 
-function loadSVGs() {
-  fetch("icons.svg")
-    .then((response) => response.text())
-    .then((svgContent) => {
-      document.getElementById("svg-container").innerHTML = svgContent;
-    })
-    .catch((error) => console.error("Error loading SVG file:", error));
-}
+// function loadSVGs() {
+//   fetch("icons.svg")
+//     .then((response) => response.text())
+//     .then((svgContent) => {
+//       document.getElementById("svg-container").innerHTML = svgContent;
+//     })
+//     .catch((error) => console.error("Error loading SVG file:", error));
+// }

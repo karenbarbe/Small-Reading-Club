@@ -1,4 +1,4 @@
-// Books database
+// This database is no longer being used. Does not contain latest content.
 const books = [
   {
     emotion: "Supernatural",

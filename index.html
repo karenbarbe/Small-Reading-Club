@@ -1,138 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Small Reading Club | Javascript project</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/qjl2psh.css">
-  <link rel="stylesheet" href="style.css">
-</head> 
-<body>
-  <div id="svg-container" style="display: none;"></div>
-  <header>
-    <nav class="nav">
-      <a href="#my-reading">
-        <div class="count-box flex">
-          <p>I've read <span id="nav-read-count">0</span></p>
-          <p>I want to read <span id="nav-to-read-count">0</span></p>
-        </div>
-      </a>
-    </nav>
-  </header>
-  <main class="flex-column stack-lg">
-  
-    <section id="intro" class="intro">
-      <div class="intro-bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Small Reading Club | Javascript project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/qjl2psh.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="svg-container" style="display: none"></div>
+    <header>
+      <nav class="nav">
+        <a href="#my-reading">
+          <div class="count-box flex">
+            <p>I've read <span id="nav-read-count">0</span></p>
+            <p>I want to read <span id="nav-to-read-count">0</span></p>
+          </div>
+        </a>
+      </nav>
+    </header>
+    <main class="flex-column stack-lg">
+      <section id="intro" class="intro">
+        <div class="intro-bg">
+          <div class="intro__container">
+            <div class="intro__content flex-column">
+              <span class="label-heading">A small</span>
+              <div class="h1__container flex">
+                <div class="bookmark flex-column">
+                  <div class="bookmark-top"></div>
 
-        <div class="intro__container">
-
-          <div class="intro__content flex-column">
-            <span class="label-heading">A small</span>
-            <div class="h1__container flex">
-              <div class="bookmark flex-column">
-                <div class="bookmark-top"></div>
-
-                 <svg class="bookmark-icon" viewBox="0 0 24 37" width="24" height="37">
-                  <use xlink:href="#bookmark-intro"></use>
-                </svg>
-
+                  <svg
+                    class="bookmark-icon"
+                    viewBox="0 0 24 37"
+                    width="24"
+                    height="37"
+                  >
+                    <use xlink:href="#bookmark-intro"></use>
+                  </svg>
+                </div>
+                <h1>Reading club</h1>
               </div>
-              <h1>Reading club</h1>
+              <p class="p-lg">
+                Find your next read! Discover a book you've meant to read or
+                revisit a beloved favorite you'd like to pick up again.
+              </p>
             </div>
-            <p class="p-lg">Find your next read! Discover a book you've meant to read or revisit a beloved favorite you'd like to pick up again.</p>
+
+            <div class="intro__picture">
+              <picture class="picture">
+                <source
+                  srcset="./images/smallreadingclub-cover.png"
+                  media="(min-width: 768px)"
+                  width="484"
+                  height="512"
+                />
+
+                <img
+                  src="./images/smallreadingclub-cover-mobile.png"
+                  alt="Woman reading on chair, illustration"
+                  width="484"
+                  height="412"
+                />
+              </picture>
+            </div>
           </div>
-          
-          <div class="intro__picture">
-            <picture class="picture">
-            <source
-              srcset="./images/smallreadingclub-cover.png"
-              media="(min-width: 768px)" width="484" height="512"
-            />
+        </div>
+      </section>
 
-            <img
-              src="./images/smallreadingclub-cover-mobile.png"
-              alt="Woman reading on chair, illustration"
-              width="484" height="412"
-            />
-            </picture>
+      <section id="articles__list"></section>
+
+      <section id="my-reading" class="my-reading__container">
+        <svg class="bookmark-icon" viewBox="0 0 32 41" width="32" height="41">
+          <use xlink:href="#bookmark-icon"></use>
+        </svg>
+
+        <div class="my-reading__header">
+          <h2>My reading</h2>
+        </div>
+
+        <div class="my-reading__inner">
+          <div>
+            <p id="read-count" class="p-md">
+              I haven't read any of these books yet...
+            </p>
+            <ul id="read-count-ul" class="my-reading__ul read__ul"></ul>
           </div>
-
+          <div>
+            <p id="to-read-count" class="p-md">
+              I'm sure there's something for me...
+            </p>
+            <ul id="to-read-count-ul" class="my-reading__ul to-read__ul"></ul>
+          </div>
         </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container flex-column">
+        <picture>
+          <img
+            src="./images/smallreadingclub-footer.png"
+            alt=""
+            width="40"
+            height="146"
+          />
+        </picture>
+        <h4>A small reading club</h4>
 
-      </div>
+        <div class="footer__inner stack-lg">
+          <p>A project by Karen Barbé</p>
 
+          <div class="flex">
+            <div class="stack-sm">
+              <h5>Stack</h5>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+              </ul>
+            </div>
 
-    </section>
-
-    <section id="articles__list"></section>
-
-    <section id="my-reading" class="my-reading__container">
-
-
-    <svg class="bookmark-icon" viewBox="0 0 32 41" width="32" height="41">
-      <use xlink:href="#bookmark-icon"></use>
-    </svg>
-
-
-      <div class="my-reading__header">
-        <h2>My reading</h2>
-      </div>
-      
-      <div class="my-reading__inner">
-        <div>
-          <p id="read-count" class="p-md">I haven't read any of these books yet...</p>
-          <ul id="read-count-ul" class="my-reading__ul read__ul"></ul>
-        </div>
-        <div>
-          <p id="to-read-count" class="p-md">I'm sure there's something for me...</p>
-          <ul id="to-read-count-ul" class="my-reading__ul to-read__ul"></ul>
-        </div>
-      </div>
-
-
-
-    </section>
-  
-  </main>
-  <footer class="footer">
-
-    <div class="footer__container flex-column">
-      <picture>
-        <img src="./images/smallreadingclub-footer.png" alt="" width="40" height="146">
-      </picture>
-      <h4>A small reading club</h4>
-
-
-      <div class="footer__inner stack-lg">
-        <p>A project by Karen Barbé</p>
-        
-        <div class="flex">       
-        <div class="stack-sm">
-          <h5>Stack</h5>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-          </ul>
-        </div>
-        
-        <div class="stack-sm">
-          <h5>About</h5>
-          <ul>
-            <li><a href="https://github.com/karenbarbe/Small-Reading-Club" target="_blank">Repository</a></li>
-            <li><a href="https://zuloaga.studio" target="_blank">Design</a></li>
-            <li><a href="https://www.nytimes.com/interactive/2024/books/best-books-21st-century.html?unlocked_article_code=1.500.GzfQ.ZEvZG-ysTgKQ&smid=nytcore-ios-share&referringSource=articleShare&sgrp=c-cb#book-10" target="_blank">Inspiration</a></li>
-          </ul>
+            <div class="stack-sm">
+              <h5>About</h5>
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/karenbarbe/Small-Reading-Club"
+                    target="_blank"
+                    >Repository</a
+                  >
+                </li>
+                <li>
+                  <a href="https://zuloaga.studio" target="_blank">Design</a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.nytimes.com/interactive/2024/books/best-books-21st-century.html?unlocked_article_code=1.500.GzfQ.ZEvZG-ysTgKQ&smid=nytcore-ios-share&referringSource=articleShare&sgrp=c-cb#book-10"
+                    target="_blank"
+                    >Inspiration</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      </div>
-  </div>
-</footer>
+    </footer>
 
-  <script src="database.js"></script>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

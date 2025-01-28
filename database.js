@@ -1,4 +1,5 @@
-// This database is no longer being used. Does not contain latest content.
+// This database has been replaced by external spreadsheet. Do not use.
+
 const books = [
   {
     emotion: "Supernatural",

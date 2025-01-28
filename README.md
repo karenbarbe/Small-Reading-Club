@@ -4,7 +4,7 @@ Find your next read! Discover a book you've meant to read or revisit a beloved f
 
 ## About the project
 
-A personal project showcasing a curated collection of books in an interactive single-page website that helps readers discover their next great book. Built with HTML, CSS, and JavaScript, this site displays several book entries including visual previews, detailed information, and interactive features to track reading interest.
+A personal project showcasing a curated collection of books in a responsive and interactive single-page website that helps readers discover their next great book. Built with HTML, CSS, and JavaScript, this site displays multiple book entries that include visual previews, detailed information, and interactive features to track reading interest.
 
 ## Live site
 
@@ -37,10 +37,14 @@ Each book entry includes:
 
 ### Technical implementation
 
+**Layout**:
+
+- Minimal HTML structure
+- Responsive CSS with media queries to adapt to mobile, tablet, desktop and large screen
+
 **Dynamic content generation**:
 
 - Book entries are dynamically created with JavaScript
-- Minimal HTML structure
 - Content is managed through a private Google Sheets database
 
 **Data pipeline**:
@@ -61,13 +65,14 @@ Each book entry includes:
 
 To run this project locally:
 
-1. Clone the repository
-   ```
-   git clone https://github.com/karenbarbe/Small-Reading-Club.git
-   ```
-2. Open `index.html` in your preferred browser
+1. Clone the repository and open `index.html` in your preferred browser
 
-Note: The site runs on pre-processed JSON data. The content management system (Google Sheets) is private to maintain data integrity.
+To update content (access required to Google Sheets file):
+
+1. Edit the Google Sheets document
+2. Create vitual environment and pip install `requirements.txt`
+3. Run `main.py` to regenerate `books.json`
+4. Refresh browser
 
 ## Project status
 
@@ -78,4 +83,4 @@ Feedback and suggestions are welcome through GitHub issues.
 - This project was originally created as a team project for a JavaScript course on [CodePen](https://codepen.io/firstwoman/pen/XWLmoRJ)
 - The reading tracking feature was inspired by The New York Times' ["The 100 Best Books of the 21st Century"](https://www.nytimes.com/interactive/2024/books/best-books-21st-century.html) interactive article
 - All book descriptions and reviews have been curated from various editorial sites and GoodRead
-- UI re-design by [Rodrigo Zuloaga Studio](https://zuloaga.studio/)
+- UI design by [Zuloaga Studio](https://zuloaga.studio/)

@@ -49,7 +49,7 @@ Each book entry includes:
 - Python script converts CSV to JSON
 - JavaScript fetches and renders the JSON data
 
-## Built With
+## Built with
 
 - HTML5
 - CSS3
@@ -57,7 +57,7 @@ Each book entry includes:
 - Python (for data processing)
 - Google Sheets (as a CMS)
 
-## Getting Started
+## Getting started
 
 To run this project locally:
 

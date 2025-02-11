@@ -82,5 +82,5 @@ Feedback and suggestions are welcome through GitHub issues.
 
 - This project was originally created as a team project for a JavaScript course on [CodePen](https://codepen.io/firstwoman/pen/XWLmoRJ)
 - The reading tracking feature was inspired by The New York Times' ["The 100 Best Books of the 21st Century"](https://www.nytimes.com/interactive/2024/books/best-books-21st-century.html) interactive article
-- All book descriptions and reviews have been curated from various editorial sites and GoodRead
+- All book descriptions and reviews have been curated from various editorial sites and GoodReads
 - UI design by [Zuloaga Studio](https://zuloaga.studio/)
